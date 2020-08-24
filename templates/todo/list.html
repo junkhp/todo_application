@@ -17,7 +17,8 @@
 <div class="container">
     {% for item in object_list %}
     <div class="alert alert-{{ item.priority }}" role="alert">
-        <p>{{item.title}} 期日：{{item.duedate}}</p>
+        <p>{{item.title}}</p>
+        <p>期日：{{item.duedate}}</p>
         <a href="{% url 'update' item.pk %}" class="btn btn-primary btn" tabindex="-1" role="button"
             aria-disabled="true">編集</a>
         <a href="{% url 'delete' item.pk%}" class="btn btn-danger btn" tabindex="-1" role="button"
